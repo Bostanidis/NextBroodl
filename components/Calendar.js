@@ -29,13 +29,11 @@ export default function Calendar(props) {
     const now = new Date()
     const currentMonth = now.getMonth()
     const [selectedMonth, setSelectedMonth] = useState(Object.keys(months)[currentMonth])
-    console.log( "Selected month:",selectedMonth)
 
     const [selectedYear, setSelectedYear] = useState(now.getFullYear())
 
     const numericMonth = Object.keys(months).indexOf(selectedMonth)
     const data = completeData?.[selectedYear]?.[numericMonth] || {}
-    console.log(data) 
     function handleIncrementMonth(val) {
         // value +1 -1
         // if we hit the bounds of the months, then we can just adjust the year that is displayed
