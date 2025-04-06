@@ -12,8 +12,6 @@ export default function Logout() {
 
     const pathName = usePathname()
 
-    console.log(pathName)
-
     if (!currentUser) {
         return null
     }
